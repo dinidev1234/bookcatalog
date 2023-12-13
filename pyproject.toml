@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "bookcatalog"
+version = "0.1.0"
+description = "Book Catalog maded by drf"
+authors = ["Dinislam <aikenamuteshova@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0"
+djangorestframework = "^3.14.0"
+flake8 = "^6.1.0"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

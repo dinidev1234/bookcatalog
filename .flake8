@@ -1,0 +1,5 @@
+[flake8]
+ignore = W292
+exclude = .git, *migrations*, *venv*
+max-line-length = 100
+max_complexity = 10
