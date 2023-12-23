@@ -8,7 +8,7 @@ from django.db import models
 class CustomUser(AbstractUser):
 
     def __str__(self):
-        return self.email
+        return self.username
 
 
 class Author(models.Model):
@@ -33,12 +33,13 @@ class Book(models.Model):
     publication_date = models.DateField(auto_now_add=True)
     average_rating = models.DecimalField(max_digits=3, decimal_places=2, default=0.00)
 
+
     def __str__(self):
         return f'{self.title}, {self.author}'
 
 
 class Review(models.Model):
-    book = models.ForeignKey(Book, related_name='reviews', on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, related_name='Review', on_delete=models.CASCADE)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     rating = models.IntegerField()
     text = models.TextField()
